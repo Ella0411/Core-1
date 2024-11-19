@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>World</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f0f0f0;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 100vw;
+      height: 100vh;
+      background-image: url('Images/World map.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .choice-screen, .content-screen {
+      display: none;
+      text-align: center;
+      width: 100%;
+    }
+
+    .active {
+      display: block;
+    }
+
+    .choice-screen h1 {
+      color: white; /* 폰트 색상을 흰색으로 설정 */
+    }
+
+    .country-button {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background-color: white;
+      cursor: pointer;
+      border: none;
+      border-radius: 100px;
+      transition: background-color 0.3s ease;
+    }
+
+    .usa-button {
+      top: 42.5%;
+      left: 92.8%;
+      background-color: transparent;
+    }
+
+    .korea-button {
+      top: 45.3%;
+      left: 45%;
+      background-color: transparent;
+    }
+
+    .japan-button {
+      top: 45.5%;
+      left: 48.8%;
+      background-color: transparent;
+    }
+
+    .france-button {
+      top: 36.9%;
+      left: 7.5%;
+      background-color: transparent;
+    }
+
+    .spain-button {
+      top: 42.7%;
+      left: 5.7%;
+      background-color: transparent;
+    }
+
+    .country-button:hover {
+      background-color: lightgray;
+    }
+
+    .square-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .square {
+      width: 100px;
+      height: 100px;
+      background-color: skyblue;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+
+    .square:hover {
+      background-color: royalblue;
+    }
+  </style>
+</head>
+<body>
+  <div id="container" class="container">
+    <div id="choice-screen" class="choice-screen active">
+      <h1>Choose Your Destination</h1>
+      <button class="country-button usa-button" onclick="showScreen('USA')"></button>
+      <button class="country-button korea-button" onclick="showScreen('Korea')"></button>
+      <button class="country-button japan-button" onclick="showScreen('Japan')"></button>
+      <button class="country-button france-button" onclick="showScreen('France')"></button>
+      <button class="country-button spain-button" onclick="showScreen('Spain')"></button>
+    </div>
+
+    <div id="USA-screen" class="content-screen">
+      <h2>USA</h2>
+      <div class="square-container">
+        <div class="square" onclick="showModalImage('Images/park.png', 'Audio/park.mp3', '#At the central park')">Park</div>
+        <div class="square" onclick="showModalImage('Images/school.png', 'Audio/school.mp3', '#At the school')">School</div>
+        <div class="square" onclick="showModalImage('Images/home.png', 'Audio/home.mp3', '#With my friends')">Home</div>
+      </div>
+      <button class="back-button" onclick="goBack()">Back</button>
+    </div>
+
+<div id="Korea-screen" class="content-screen">
+  <h2>Korea</h2>
+  <div class="square-container">
+    <div style="display: flex; flex-direction: column; align-items: center;">
+      <img src="Images/seoul.png" alt="Seoul" style="width: 100px; height: 100px; border-radius: 8px; cursor: pointer;" onclick="showModalImage('Images/seoul.png', 'Audio/seoul.mp3', '#In the heart of Seoul')">
+      <span style="color: black; font-weight: bold; margin-top: 5px;">Seoul</span>
+    </div>
+    <div style="display: flex; flex-direction: column; align-items: center; margin-top: 5px;">
+      <img src="Images/busan.png" alt="Busan" style="width: 100px; height: 85px; margin-top: 13px; border-radius: 8px; cursor: pointer;" onclick="showModalImage('Images/busan.png', 'Audio/busan.mp3', '#')">
+      <span style="color: black; font-weight: bold; margin-top: 2px;">Busan</span>
+    </div>
+    <div style="display: flex; flex-direction: column; align-items: center; margin-top 5px;">
+      <img src="Images/jeju.png" alt="Jeju" style="width: 100px; height: 90px; margin-top: 14px; border-radius: 8px; curosr: pointer;" onclick="showModalImage('Images/jeju.png', 'Audio/jeju.mp3', '#')">
+      <span style="color: black; font-weight: bold; margin-top: 1px;">Jeju</span>
+    </div>
+  </div>
+  <button class="back-button" onclick="goBack()">Back</button>
+</div>
+
+    <div id="Japan-screen" class="content-screen">
+      <h2>Japan</h2>
+      <div class="square-container">
+        <div class="square">Tokyo</div>
+        <div class="square">Kyoto</div>
+        <div class="square">Osaka</div>
+      </div>
+      <button class="back-button" onclick="goBack()">Back</button>
+    </div>
+
+    <div id="France-screen" class="content-screen">
+      <h2>France</h2>
+      <div class="square-container">
+        <div class="square">Paris</div>
+        <div class="square">Lyon</div>
+        <div class="square">Nice</div>
+      </div>
+      <button class="back-button" onclick="goBack()">Back</button>
+    </div>
+
+    <div id="Spain-screen" class="content-screen">
+      <h2>Spain</h2>
+      <div class="square-container">
+        <div class="square">Madrid</div>
+        <div class="square">Barcelona</div>
+        <div class="square">Seville</div>
+      </div>
+      <button class="back-button" onclick="goBack()">Back</button>
+    </div>
+  </div>
+
+  <script>
+    function showScreen(screen) {
+      document.querySelector('#container').style.backgroundImage = 'none';
+      document.querySelectorAll('.choice-screen, .content-screen').forEach(element => {
+        element.classList.remove('active');
+      });
+      document.getElementById(screen + '-screen').classList.add('active');
+    }
+
+    function goBack() {
+      document.querySelector('#container').style.backgroundImage = 'url("Images/World map.jpg")';
+      document.querySelectorAll('.choice-screen, .content-screen').forEach(element => {
+        element.classList.remove('active');
+      });
+      document.getElementById('choice-screen').classList.add('active');
+    }
+  </script>
+</body>
+</html>
