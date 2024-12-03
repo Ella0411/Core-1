@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School</title>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      overflow: hidden;
+      overflow-y: scroll;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 220vh;
+      background: #f0f0f0;
+    }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .first-image,
+  .second-image,
+  .third-image {
+    width: 400px;
+    margin-bottom: 20px;
+  }
+
+  .shape,
+    .second-shape,
+    .third-shape,
+    .forth-shape,
+    .fifth-shape {
+      position: absolute;
+      background: #f0f0f0;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      padding: 15px;
+      max-width: 350px;
+      color: #333;
+      font-size: 14px;
+      font-family: Arial, sans-serif;
+    }
+
+    .shape {
+      top: 450px;
+      right: 250px;
+    }
+
+    .second-shape {
+      top: 950px;
+      left: 250px;
+    }
+
+    .third-shape {
+      top: 1450px;
+      right: 250px;
+    }
+
+    .forth-shape {
+      top: 1950px;
+      left: 250px;
+    }
+
+    .fifth-shape {
+      top: 2450px;
+      right: 250px  ;
+    }
+
+</style>
+</head>
+<body>
+    <audio id="background-audio" autoplay loop>
+    <source src="Audio/School.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div id="container" class="container">
+    <img class="first-image" src="Images/School.png">
+    <img class="second-image" src="Images/school2.png">
+    <img class="third-image" src="Images/school3.png">
+
+  </div>
+
+  <div class="shape">
+    This is my school Parsons!<br>It was a place where I was just nervous, scared, and nervous when I first came, but now it has become a familiar and familiar place.
+    </div>
+
+    <div class="second-shape">
+      It was a project I did in the Image/Drawing class in the first semester of the first year.<br>Actually, it was boring because it was a foundation course, but it was interesting for other friends to see one work.
+    </div>
+
+    <div class="third-shape">
+     Once a day, I buy fruit from the cafe. It's too expensive, but I think it's so nice to have watermelon almost all the time. I can't live without watermelon.🍉
+    </div>
+
+
+<script>
+  window.addEventListener('load', () => {
+    const audio = document.getElementById('background-audio');
+    audio.play().catch((error) => {
+      console.log('Autoplay blocked. User interaction required:', error);
+    });
+  });
+  </script>
+
+</body>
+</html>

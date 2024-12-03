@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeju</title>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      overflow: hidden;
+      overflow-y: scroll;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 380vh;
+      background: #f0f0f0;
+    }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .first-image,
+  .second-image,
+  .third-image,
+  .forth-image,
+  .fifth-image,
+  .sixth-image {
+    width: 400px;
+    margin-bottom: 20px;
+  }
+
+  .shape,
+    .second-shape,
+    .third-shape,
+    .forth-shape,
+    .fifth-shape,
+    .sixth-shape {
+      position: absolute;
+      background: #f0f0f0;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      padding: 15px;
+      max-width: 350px;
+      color: #333;
+      font-size: 14px;
+      font-family: Arial, sans-serif;
+    }
+
+    .shape {
+      top: 450px;
+      right: 250px;
+    }
+
+    .second-shape {
+      top: 950px;
+      left: 250px;
+    }
+
+    .third-shape {
+      top: 1450px;
+      right: 250px;
+    }
+
+    .forth-shape {
+      top: 1950px;
+      left: 250px;
+    }
+
+    .fifth-shape {
+      top: 2450px;
+      right: 250px  ;
+    }
+
+    .sixth-shape {
+      top: 2950px;
+      left: 250px;
+    }
+
+</style>
+</head>
+<body>
+    <audio id="background-audio" autoplay loop>
+    <source src="Audio/jeju.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div id="container" class="container">
+    <img class="first-image" src="Images/jeju.jpg">
+    <img class="second-image" src="Images/jeju2.png">
+    <img class="third-image" src="Images/jeju3.png">
+    <img class="forth-image" src="Images/jeju4.png">
+    <img class="fifth-image" src="Images/jeju5.png">
+    <img class="sixth-image" src="Images/jeju6.png">
+
+  </div>
+
+      <div class="shape">
+    When my mother lived in Jeju Island for a year, I often visited Jeju Island.<br>This is the river where I went with my mother, and it was really pretty.<br>I had a great time imagining the future I will get married after seeing many newlyweds filming their wedding.
+    </div>
+
+    <div class="second-shape">
+      The colors of the sea in Jeju Island are really colorful.<br>Sometimes, it looks like a deep blue and going to swallow everything when rainy day, but on a clear day like this picture, the waves are calm and the emerald light.<br>It was a day of healing to see many people playing.
+    </div>
+
+    <div class="third-shape">
+      Jeju Island is in full bloom with beautiful flowers throughout the four seasons, so tourists are constantly visiting.<br>Among them, I like canola flowers of Jeju Island, so I often visited them in spring.<br>Jeju Island is very beautiful because you can often see canola flowers filled with large fields.
+    </div>
+
+    <div class="forth-shape">
+      Jeju Island is famous for its short hiking trails called Oreum.<br>Horses are often seen on Oreum, and it is the first time I have seen a horse lying down and sleeping on this day.<br>I first learned that horses can sleep even if they lie down.
+    </div>
+
+    <div class="fifth-shape">
+      This picture was taken at another Oreum, and it contains the wonderful scenery of Oreum in Jeju Island well.
+    </div>
+
+    <div class="sixth-shape">
+      The last time I went to Jeju Island, I went there with my mom and sister.<br>I bought various foods at a traditional market in Jeju Island and ate them together, and it was a really delicious and happy memory.<br>It was a trip where I felt a lot of gratitude.
+    </div>
+
+<script>
+  window.addEventListener('load', () => {
+    const audio = document.getElementById('background-audio');
+    audio.play().catch((error) => {
+      console.log('Autoplay blocked. User interaction required:', error);
+    });
+  });
+  </script>
+
+</body>
+</html>

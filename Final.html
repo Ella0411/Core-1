@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>World</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f0f0f0;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 100vw;
+      height: 100vh;
+      background-image: url('Images/Google Maps.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .choice-screen, .content-screen {
+      display: none;
+      text-align: center;
+      width: 100%;
+    }
+
+    .active {
+      display: block;
+    }
+
+    .choice-screen h1 {
+      color: white;
+    }
+
+    .country-button {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: palegreen;
+      cursor: pointer;
+      border: none;
+      border-radius: 50%;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 0 10px 5px rgba(152, 251, 152, 0.6); 
+    }
+
+    .usa-button {
+      top: 571px;
+      left: 92px;
+    }
+
+    .korea-button {
+      top: 600px;
+      right: 170px;
+    }
+
+    .france-button {
+      top: 487px;
+      left: 640px;
+    }
+
+    .country-button:hover {
+      background-color: white;
+      box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.8); 
+    }
+  </style>
+</head>
+<body>
+  <div id="container" class="container">
+    <div id="choice-screen" class="choice-screen active">
+      <h1>Choose Your Destination</h1>
+      <button class="country-button usa-button" onclick="window.location.href='USA.html';"></button>
+      <button class="country-button korea-button" onclick="window.location.href='Korea.html';"></button>
+      <button class="country-button france-button" onclick="window.location.href='France.html';"></button>
+    </div>
+  </div>
+</body>
+</html>

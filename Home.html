@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+<style>
+  body {
+          font-family: Arial, sans-serif;
+      margin: 0;
+      overflow: hidden;
+      overflow-y: scroll;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 330vh;
+      background: #f0f0f0;
+    }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .first-image,
+  .second-image,
+  .third-image,
+  .forth-image,
+  .fifth-image {
+    width: 400px;
+    margin-bottom: 20px;
+  }
+
+    .shape,
+    .second-shape,
+    .third-shape,
+    .forth-shape,
+    .fifth-shape {
+      position: absolute;
+      background: #f0f0f0;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      padding: 15px;
+      max-width: 350px;
+      color: #333;
+      font-size: 14px;
+      font-family: Arial, sans-serif;
+    }
+
+    .shape {
+      top: 450px;
+      right: 250px;
+    }
+
+    .second-shape {
+      top: 950px;
+      left: 250px;
+    }
+
+    .third-shape {
+      top: 1450px;
+      right: 250px;
+    }
+
+    .forth-shape {
+      top: 1950px;
+      left: 250px;
+    }
+
+    .fifth-shape {
+      top: 2450px;
+      right: 250px  ;
+    }
+
+
+</style>
+</head>
+<body>
+    <audio id="background-audio" autoplay loop>
+    <source src="Audio/Home.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div id="container" class="container">
+    <img class="first-image" src="Images/home.png">
+    <img class="second-image" src="Images/home2.png">
+    <img class="third-image" src="Images/home3.png">
+    <img class="forth-image" src="Images/home4.png">
+    <img class="fifth-image" src="Images/home5.png">
+
+  </div>
+
+  <div class="shape">
+    It was the day when I had a housewarming party with my friends.<br>I had a great time preparing food and talking with my friends who arrived.
+    </div>
+
+    <div class="second-shape">
+      This is a window view I just woke up from. I took this picture without even opening my eyes because the view of Manhattan is so pretty.<br>Sometimes I want to leave the city, but the view from outside Manhattan is still wonderful.
+    </div>
+
+    <div class="third-shape">
+      It's Korean food that I make at home! I miss Korean food so much that I make Korean food that I want to eat every day.<br>I think my cooking skills have improved compared to English since I studied abroad..🥹
+    </div>
+
+    <div class="forth-shape">
+      This is homemade chicken! Cooking chicken is really hard but it was fun.<br>But I don't think I'm gonna try this again.😂
+    </div>
+
+    <div class="fifth-shape">
+      On my 200th day with my boyfriend! I made him a surprise cake. I'm ashamed to have made a cake that was so ugly for an art student, but it was a satisfying event for my first time making it.
+    </div>
+
+<script>
+  window.addEventListener('load', () => {
+    const audio = document.getElementById('background-audio');
+    audio.play().catch((error) => {
+      console.log('Autoplay blocked. User interaction required:', error);
+    });
+  });
+  </script>
+
+</body>
+</html>

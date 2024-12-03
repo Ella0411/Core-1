@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Park</title>
+<style>
+      body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      overflow: hidden;
+      overflow-y: scroll;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 330vh;
+      background: #f0f0f0;
+    }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .first-image,
+  .second-image,
+  .third-image,
+  .forth-image,
+  .fifth-image {
+    width: 400px;
+    margin-bottom: 20px;
+  }
+.shape,
+    .second-shape,
+    .third-shape,
+    .forth-shape,
+    .fifth-shape {
+      position: absolute;
+      background: #f0f0f0;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      padding: 15px;
+      max-width: 350px;
+      color: #333;
+      font-size: 14px;
+      font-family: Arial, sans-serif;
+    }
+
+    .shape {
+      top: 450px;
+      right: 250px;
+    }
+
+    .second-shape {
+      top: 950px;
+      left: 250px;
+    }
+
+    .third-shape {
+      top: 1450px;
+      right: 250px;
+    }
+
+    .forth-shape {
+      top: 1950px;
+      left: 250px;
+    }
+
+    .fifth-shape {
+      top: 2450px;
+      right: 250px  ;
+    }
+
+</style>
+</head>
+<body>
+    <audio id="background-audio" autoplay loop>
+    <source src="Audio/Park.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div id="container" class="container">
+    <img class="first-image" src="Images/park.png">
+    <img class="second-image" src="Images/park2.png">
+    <img class="third-image" src="Images/park3.png">
+    <img class="forth-image" src="Images/park4.png">
+    <img class="fifth-image" src="Images/park5.png">
+  </div>
+
+  <div class="shape">
+    This is a spot I came across by chance. I saw a raccoon here, so I call it the raccoon spot.<br>My mom said she really wanted to come to Central Park in the fall, but she couldn't come this year, so I went and took a picture of her and sent it to her.<br>It's a landscape that makes sense why she wanted to come.
+    </div>
+
+    <div class="second-shape">
+      This is my favorite place.<br>It's just a little further up from the raccoon spot, and there's always a grandfather playing saxophone. When you listen to the performance and look at the scenery, the sun goes down, and sunset you can see is really beautiful.
+    </div>
+
+    <div class="third-shape">
+      I took this picture because it was so cool to see people sitting on the edge of a rock and reading a book on the way by.<br>I think this is the romance of New York that can be found in a busy city.
+    </div>
+
+    <div class="forth-shape">
+      This photo was taken in the same place as the picture above, but it shows the buildings of New York.<br>It is an ironic New York that people who read books in a busy city make contrast but seem to be harmonizing with the scenery of New York.
+    </div>
+
+    <div class="fifth-shape">
+      This is a screaming squirrel I found on my way down from my favorite place.<br>I thought someone was shouting at me, so I looked at it and found a squirrel. Is fall courting me?<br>LI was amazed to see a screaming squirrel for the first time.
+    </div>
+
+
+  <script>
+  window.addEventListener('load', () => {
+    const audio = document.getElementById('background-audio');
+    audio.play().catch((error) => {
+      console.log('Autoplay blocked. User interaction required:', error);
+    });
+  });
+  </script>
+
+
+</body>
+</html>

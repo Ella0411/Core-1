@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Busan</title>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      overflow: hidden;
+      overflow-y: scroll;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 280vh;
+      background: #f0f0f0;
+    }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .first-image,
+  .second-image,
+  .third-image,
+  .forth-image,
+  .fifth-image {
+    width: 400px;
+    margin-bottom: 20px;
+  }
+
+    .shape,
+    .second-shape,
+    .third-shape,
+    .forth-shape,
+    .fifth-shape {
+      position: absolute;
+      background: #f0f0f0;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      padding: 15px;
+      max-width: 350px;
+      color: #333;
+      font-size: 14px;
+      font-family: Arial, sans-serif;
+    }
+
+    .shape {
+      top: 450px;
+      right: 250px;
+    }
+
+    .second-shape {
+      top: 950px;
+      left: 250px;
+    }
+
+    .third-shape {
+      top: 1450px;
+      right: 300px;
+    }
+
+    .forth-shape {
+      top: 1950px;
+      left: 250px;
+    }
+
+    .fifth-shape {
+      top: 2450px;
+      right: 250px  ;
+    }
+</style>
+</head>
+<body>
+    <audio id="background-audio" autoplay loop>
+    <source src="Audio/Busan.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div id="container" class="container">
+    <img class="first-image" src="Images/busan.jpg">
+    <img class="second-image" src="Images/busan2.png">
+    <img class="third-image" src="Images/busan3.png">
+    <img class="forth-image" src="Images/busan4.png">
+    <img class="fifth-image" src="Images/busan5.png">
+
+  </div>
+
+    <div class="shape">
+      I made plates at Busan! This was my second experience of pottery.<br>It was really exciting experience and I use these plates everyday. 
+    </div>
+
+    <div class="second-shape">
+      This is my first travel with my friend. I always traveled with my family, so I was really nervous.<br>This trip I went with my friend was really good memory for me. 
+    </div>
+
+    <div class="third-shape">
+      We wrote our initials on the sand beach. 
+    </div>
+
+    <div class="forth-shape">
+      This was my second travel with my boyfriend.<br>Grilled clams were really delicious.<br> When I go back to Korea later, I really want to go to Busan and eat grilled clams again.
+    </div>
+
+
+<script>
+  window.addEventListener('load', () => {
+    const audio = document.getElementById('background-audio');
+    audio.play().catch((error) => {
+      console.log('Autoplay blocked. User interaction required:', error);
+    });
+  });
+  </script>
+
+</body>
+</html>
