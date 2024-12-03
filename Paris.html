@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paris</title>
+<style>
+      body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      overflow: hidden;
+      overflow-y: scroll;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 330vh;
+      background: #f0f0f0;
+    }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .first-image,
+  .second-image,
+  .third-image,
+  .forth-image,
+  .fifth-image {
+    width: 400px;
+    margin-bottom: 20px;
+  }
+.shape,
+    .second-shape,
+    .third-shape,
+    .forth-shape,
+    .fifth-shape {
+      position: absolute;
+      background: #f0f0f0;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      padding: 15px;
+      max-width: 350px;
+      color: #333;
+      font-size: 14px;
+      font-family: Arial, sans-serif;
+    }
+
+    .shape {
+      top: 450px;
+      right: 250px;
+    }
+
+    .second-shape {
+      top: 950px;
+      left: 250px;
+    }
+
+    .third-shape {
+      top: 1450px;
+      right: 250px;
+    }
+
+    .forth-shape {
+      top: 1950px;
+      left: 250px;
+    }
+
+    .fifth-shape {
+      top: 2450px;
+      right: 250px  ;
+    }
+
+</style>
+</head>
+<body>
+    <audio id="background-audio" autoplay loop>
+    <source src="Audio/Paris.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div id="container" class="container">
+    <img class="first-image" src="Images/paris.png">
+    <img class="second-image" src="Images/paris2.png">
+    <img class="third-image" src="Images/paris3.png">
+    <img class="forth-image" src="Images/paris4.png">
+    <img class="fifth-image" src="Images/paris5.png">
+  </div>
+
+  <div class="shape">
+    The Eiffel Tower is truly filled with romance.<br>Many people spend time with their families, lovers, and friends while gazing at the Eiffel Tower. Although it can be uncomfortable right under the tower due to aggressive vendors, it looks truly beautiful from afar.
+    </div>
+
+    <div class="second-shape">
+      The Arc de Triomphe is an impressive structure, admired for its incredible detail and grandeur. I’ve heard that it’s possible to go inside and climb to the top, though I haven’t done it myself.<br>Additionally, the way the roads converge around the Arc de Triomphe is truly spectacular.
+    </div>
+
+    <div class="third-shape">
+      My brothers are big soccer fans, so we visited a stadium.<br>I don’t know much about it since I’m not very interested, but my excited brother explained everything to me, so I think I managed to enjoy the tour. It was a great experience.
+    </div>
+
+    <div class="forth-shape">
+      All of these are artworks made entirely out of chocolate. I visited a famous chocolate shop and happened to go upstairs to the exhibition area.<br>It was fascinating to see such intricate creations made from chocolate, and I was amazed to learn that chocolate artworks can be preserved for a long time.
+    </div>
+
+    <div class="fifth-shape">
+      This is the most memorable restaurant I visited in Paris. The food was delicious, the atmosphere was great, and most importantly, it was where I tried escargot for the first time.
+    </div>
+
+
+  <script>
+  window.addEventListener('load', () => {
+    const audio = document.getElementById('background-audio');
+    audio.play().catch((error) => {
+      console.log('Autoplay blocked. User interaction required:', error);
+    });
+  });
+  </script>
+
+
+</body>
+</html>
